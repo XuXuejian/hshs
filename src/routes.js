@@ -6,7 +6,8 @@ export const routes = [
   {
     path: '/',
     exact: true,
-    component: Home
+    component: Home,
+    loadData: (match) => console.log(match)
   }, {
     path: '/login',
     component: Login

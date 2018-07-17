@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "asset-require-hook": "^1.2.0",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.3",
+    "css-modules-require-hook": "^4.2.3",
     "express": "^4.16.3",
     "history": "^4.7.2",
     "immutable": "^3.8.2",

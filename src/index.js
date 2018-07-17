@@ -7,7 +7,7 @@ import store from './redux/store'
 import App from './App'
 import registerServiceWorker from './registerServiceWorker'
 
-ReactDOM.render(
+ReactDOM.hydrate(
   <Provider store={store}>
     <Router><App /></Router>
   </Provider>,

@@ -6,7 +6,7 @@ import store from '../redux/store'
 import App from '../App'
 
 const html = (req, context) => {
-  return ReactDOMServer.renderToString(
+  return ReactDOMServer.renderToNodeStream(
     <Provider store={store}>
       <StaticRouter location={req.url} context={context}>
         <App/>
