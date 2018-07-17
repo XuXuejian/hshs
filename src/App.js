@@ -1,20 +1,26 @@
 import React, {Component} from 'react'
+import {Route, Switch} from 'react-router-dom'
+import {connect} from 'react-redux'
 
+import { routes } from './routes'
+import {handleLoading} from './redux/actions'
+
+const mapDispatchToProps = dispatch => ({
+  handleLoading: args => dispatch(handleLoading(args))
+})
 class App extends Component {
+  componentDidMount() {
+    this.props.handleLoading(true)
+  }
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit
-          <code>src/App.js</code>
-          and save to reload.
-        </p>
-      </div>
+      <Switch>
+        {routes.map(route => (
+          <Route {...route} key={route.path}/>
+        ))}
+      </Switch>
     )
   }
 }
 
-export default App
+export default connect(null, mapDispatchToProps)(App)
