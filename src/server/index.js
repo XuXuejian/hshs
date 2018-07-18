@@ -74,7 +74,7 @@ app.use((req, res, next) => {
     })
   }
 })
-app.use('/', express.static(path.resolve('build')))
+// app.use('/', express.static(path.resolve('build')))
 
 app.listen('9000', function() {
 	console.log('open Browser http://localhost:9000')
