@@ -1,14 +1,14 @@
-.hero {
-  width: 100%;
-  color: #333;
+body{
+  min-width: 1280px;
+  font-family: 'PingFangSC','helvetica neue','hiragino sans gb','arial','microsoft yahei ui','microsoft yahei','simsun','sans-serif';
 }
-.title {
-  margin: 0;
-  width: 100%;
-  padding-top: 80px;
-  line-height: 1.15;
-  font-size: 48px;
+:focus {
+  outline: 0;
 }
-.title, .description {
-  text-align: center;
+ol, ul {
+  list-style: none;
+}
+a, a:link, a:visited, a:hover, a:active{
+  text-decoration: none;
+  color: inherit;
 }
