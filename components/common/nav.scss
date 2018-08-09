@@ -4,4 +4,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-right: 20px;
+}
+.logoImg{
+  height: 72px;
+}
+.link{
+  flex: 1;
+  font-size: 16px;
+  color: #000;
+  display: flex;
+}
+.linkItem{
+  margin-right: 20px;
+  &:hover{
+    opacity: .7;
+  }
+}
+.login{
+  padding: 0 12px;
 }

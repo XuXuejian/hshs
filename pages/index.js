@@ -1,14 +1,16 @@
 import Link from 'next/link'
 import Head from '../components/head'
 import Nav from '../components/common/nav'
-import styles from '../assets/styles/index.scss'
+import BannerWrap from '../components/common/bannerWrap'
+import styles from '../assets/styles/pages/index.scss'
+import '../assets/styles/index.scss'
 
 export default () => (
   <div>
-    {/* <Head title="Home" /> */}
+    <Head title="涵山涵水" />
     <Nav />
-    <div className={styles.hero}>
-      <h1 className={styles.title}>安徽涵山涵水教育机构</h1>
+    <div className={styles.wrap}>
+      <BannerWrap />
     </div>
   </div>
 )

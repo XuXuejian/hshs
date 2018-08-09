@@ -4,21 +4,41 @@ import nav from './nav.scss'
 
 const Nav = () => (
   <nav className={nav.head}>
-    <div className={nav.logo}>
-      <img src="/static/images/logo.png" alt="logo"/>
-    </div>
-    <ul>
-      <li>
+    <img src="/static/images/logo.png" alt="logo" className={nav.logoImg}/>
+    <ul className={nav.link}>
+      <li className={nav.linkItem}>
         <Link prefetch href="/">
-          <a>Home</a>
+          <a>建筑考试</a>
         </Link>
+      </li>
+      <li className={nav.linkItem}>
         <Link prefetch href="/about">
-          <a>About</a>
+          <a>职称申报</a>
+        </Link>
+      </li>
+      <li className={nav.linkItem}>
+        <Link prefetch href="/about">
+          <a>学历提升</a>
+        </Link>
+      </li>
+      <li className={nav.linkItem}>
+        <Link prefetch href="/about">
+          <a>资质提升</a>
+        </Link>
+      </li>
+      <li className={nav.linkItem}>
+        <Link prefetch href="/about">
+          <a>合作洽谈</a>
+        </Link>
+      </li>
+      <li className={nav.linkItem}>
+        <Link prefetch href="/about">
+          <a>联系我们</a>
         </Link>
       </li>
     </ul>
     <div className={nav.loginArea}>
-      <a>登录</a> / <a>注册</a>
+      <span className={nav.login}>登录</span> / <span className={nav.login}>注册</span>
     </div>
   </nav>
 )
