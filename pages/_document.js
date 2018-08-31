@@ -16,9 +16,9 @@ export default class MyDocument extends Document {
             name='viewport'
             content='initial-scale=1.0, width=device-width'
           />
+          <link rel='stylesheet' href='https://unpkg.com/normalize.css@8.0.0/normalize.css'/>
           <link rel='stylesheet' href='/static/nprogress.css' />
           <link rel='stylesheet' href='/_next/static/style.css' />
-          <link rel='stylesheet' href='https://unpkg.com/normalize.css@8.0.0/normalize.css'/>
         </Head>
         <body>
           <Main />

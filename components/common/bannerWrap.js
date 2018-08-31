@@ -21,9 +21,9 @@ const Menu = () => (
     <li className={styles.menuItem}>
       <div className={styles.type}>企业资质升级</div>
     </li>
-    <li className={styles.menuItem}>
+    {/* <li className={styles.menuItem}>
       <div className={styles.type}>在线模考/网校入口</div>
-    </li>
+    </li> */}
   </ul>
 )
 class Banner extends React.Component {

@@ -1,0 +1,48 @@
+.modal {
+  background-color: #fff;
+  width: 360px;
+}
+.header {
+  position: relative;
+  padding: 0 20px;
+  height: 49px;
+  line-height: 49px;
+}
+.header h1 {
+  font-size: 16px;
+  border-bottom: 1px solid #d0d6d9;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  height: 49px;
+}
+.header h1 span {
+  float: left;
+  height: 49px;
+  line-height: 49px;
+  width: 80px;
+  text-align: center;
+  cursor: pointer;
+}
+.header h1 span:hover, .active {
+  border-bottom: 1px solid #f01400;
+  color: #f01400;
+}
+.close {
+  background: url(/static/images/nlogin.png) no-repeat;
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  right: 20px;
+  top: 17px;
+  transition: transform .2s;
+  border: 0;
+  cursor: pointer;
+}
+.close:hover {
+  background-position: 0 -21px;
+  transform: scale(1.1);
+}
+.body {
+  padding: 30px;
+}

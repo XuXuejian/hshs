@@ -1,9 +1,12 @@
 import Link from 'next/link'
 
+import Login from '../login/login'
 import nav from './nav.scss'
 
 const Nav = () => (
   <nav className={nav.head}>
+    <div className={nav.mask}></div>
+    <Login className={nav.fixedLogin}/>
     <img src="/static/images/logo.png" alt="logo" className={nav.logoImg}/>
     <ul className={nav.link}>
       <li className={nav.linkItem}>
