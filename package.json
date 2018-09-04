@@ -7,9 +7,11 @@
     "start": "cross-env NODE_ENV=production node server/server.js"
   },
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "immutable": "^3.8.2",
     "joi": "^13.5.2",
+    "log4js": "^3.0.5",
     "mongoose": "^5.2.12",
     "next": "6.1.1",
     "next-redux-wrapper": "^2.0.0",

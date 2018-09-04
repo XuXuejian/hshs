@@ -1,3 +1,6 @@
 {
-  "watch": ["server/**/*.js"]
+  "watch": ["server/**/*.js"],
+  "env": {
+    "MONGO_ATLAS_PW": "node-qu"
+  }
 }
