@@ -2,13 +2,20 @@ const mongoose = require('mongoose')
 
 const userSchema = mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
-  name: {
+  account: {
     type: String,
     required: true
   },
-  password: String,
+  password: {
+    type: String,
+    required: true
+  },
   age: {
     type: Number
+  },
+  createTime: {
+    type: Date,
+    default: Date.now
   }
 })
 

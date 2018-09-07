@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styles from './login.scss'
 import Input from '../common/input/input'
 import Button from '../common/button/button'
+import api from '../../api'
 
 class login extends Component {
   state = {
@@ -13,7 +14,7 @@ class login extends Component {
   login = (e) => {
     e.preventDefault()
     console.log(this.state.params)
-    // fetch()
+    api.Login({body: this.state.params})
   }
   onChange = (data) => {
     const {params} = this.state

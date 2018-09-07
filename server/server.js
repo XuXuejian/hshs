@@ -2,8 +2,26 @@ const express = require('express')
 const next = require('next')
 const log4js = require('log4js')
 const bodyParser = require('body-parser')
+const session = require('express-session')
+const fs = require('fs')
+const path = require('path')
 
 require('./mongodb/mongodb')
+
+global.RESULT_CODE = {
+  "101": "用户已存在",
+  "102": "用户不存在",
+  "103": "密码不正确",
+  "004": "用户不存在",
+  "005": "系统错误",
+  "006": "用户不存在",
+  "007": "用户不存在",
+  "008": "用户不存在",
+  "009": "用户不存在",
+  "010": "用户不存在",
+  "011": "用户不存在",
+  "012": "用户不存在"
+}
 
 log4js.configure({
   appenders: {
@@ -24,11 +42,23 @@ const app = next({ dev })
 const handle = app.getRequestHandler()
 
 const userRoute = require('./api/user')
+const loginRoute = require('./api/login')
+
+function handleLoginSession(req, res, next) {
+  console.log('handle', req.body)
+  if (!req.session.user) {
+    res.status(500).json({
+      errMsg: '用户未登录'
+    })
+  } else {
+    next()
+  }
+}
 
 app.prepare()
   .then(() => {
     const server = express()
-
+    const router = express.Router()
     server.use(log4js.connectLogger(logger, { level: 'info' }))
     server.use(bodyParser.json())
     server.use(bodyParser.urlencoded({ extended: false }))
@@ -41,6 +71,21 @@ app.prepare()
     // })
 
     console.log(server.get('env'))
+
+    server.use(session({
+      secret: 'secret dog',
+      resave: false,
+      saveUninitialized: false,
+      cookie: {
+        maxAge: 1000 * 60 * 30
+      }
+    }))
+
+    server.get('*', (req, res) => {
+      return handle(req, res)
+    })
+
+    server.use('/api', loginRoute, handleLoginSession, userRoute)
 
     server.use((req, res, next) => {
       const error = new Error('Not Found')
@@ -55,12 +100,6 @@ app.prepare()
         }
       })
     })
-
-    server.get('*', (req, res) => {
-      return handle(req, res)
-    })
-
-    server.use('/api', userRoute)
 
     server.listen(port, (err) => {
       if (err) throw err

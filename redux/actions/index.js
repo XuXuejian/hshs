@@ -4,14 +4,10 @@ const login = (payload) => ({
   type: types.ROOT_LOGIN,
   payload
 })
-const logout = (payload) => ({
-  type: types.ROOT_LOGOUT,
-  payload
-})
 
-export const handleLogin = () => {
+export const handleLogin = (status) => {
   return dispatch => {
-    dispatch(login())
+    dispatch(login(status))
   }
 }
 

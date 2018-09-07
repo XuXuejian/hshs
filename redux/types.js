@@ -1,3 +1,2 @@
 export const ROOT_LOGIN = 'ROOT_LOGIN'
-export const ROOT_LOGOUT = 'ROOT_LOGOUT'
 export const ROOT_SET_USERINFO = 'ROOT_SET_USERINFO'

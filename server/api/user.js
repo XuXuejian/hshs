@@ -26,8 +26,9 @@ router.post('/user', (req, res, next) => {
       })
     } else {
       res.status(200).json({
-        name: doc.name,
-        age: doc.name,
+        createTime: doc.createTime,
+        account: doc.account,
+        age: doc.age,
         _id: doc._id
       })
     }
