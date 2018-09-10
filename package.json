@@ -2,18 +2,14 @@
   "name": "create-next-example-app",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server/server.js",
+    "dev": "next",
     "build": "next build",
-    "start": "cross-env NODE_ENV=production node server/server.js"
+    "start": "next start -p 8000"
   },
   "dependencies": {
-    "body-parser": "^1.18.3",
     "express": "^4.16.3",
-    "express-session": "^1.15.6",
     "immutable": "^3.8.2",
-    "joi": "^13.5.2",
     "log4js": "^3.0.5",
-    "mongoose": "^5.2.12",
     "next": "6.1.1",
     "next-redux-wrapper": "^2.0.0",
     "normalize.css": "^8.0.0",
@@ -30,7 +26,6 @@
     "@zeit/next-sass": "^0.2.0",
     "cross-env": "^5.2.0",
     "node-sass": "^4.9.2",
-    "nodemon": "^1.18.3",
     "redux-logger": "^3.0.6"
   }
 }
