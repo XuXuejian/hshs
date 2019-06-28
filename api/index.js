@@ -2,7 +2,7 @@ import 'whatwg-fetch'
 
 const BASE_URL = 'http://localhost:3002'
 const api = {
-  post(url, {body = '', ...option}) {
+  post(url, { body = '', ...option }) {
     if (body) body = JSON.stringify(body)
     const options = {
       credentials: 'include', // omit include same-origin
@@ -41,5 +41,5 @@ export default {
   },
   GetUserInfo() {
     return api.get(`/api/user`)
-  },
+  }
 }

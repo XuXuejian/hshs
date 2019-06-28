@@ -1,6 +1,7 @@
-.button {
+import styled from 'styled-components'
+const Button = styled.button`
   color: #fff;
-  border-color: #c20a0a;
+  border: none;
   background: #c20a0a;
   opacity: 1;
   padding: 11px 32px;
@@ -8,4 +9,5 @@
   line-height: 24px;
   border-radius: 24px;
   width: 300px;
-}
+`
+export default Button
